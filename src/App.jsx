@@ -1,5 +1,7 @@
+import { LogIn } from "./pages/login";
+
 function App() {
-  return <></>;
+  return <><LogIn></LogIn></>;
 }
 
 export default App;
