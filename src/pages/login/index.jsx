@@ -3,27 +3,27 @@ import { Button, TextField } from "@mui/material";
 
 import styles from "./style.module.css";
 import { useState } from "react";
-// import { useAuth } from "../../context/auth-context";
+import { useAuth } from "../../context/auth-context";
 
 export function LogIn() {
 //   const navigate = useNavigate();
 
-  // const { signIn } = useAuth();
+  const { signIn } = useAuth();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   async function onSubmit() {
-    // const data = {
-    //   username,
-    //   password,
-    // };
-    // const ok = await signIn(data);
+    const data = {
+      username,
+      password,
+    };
+    const ok = await signIn(data);
 
-    // if (ok) {
+    if (ok) {
     //   navigate("/home");
-    // } else {
-    //   alert("Email ou senha inválida");
-    // }
+    } else {
+      alert("Email ou senha inválida");
+    }
   }
 
   return (
