@@ -5,7 +5,7 @@ import styles from "./style.module.css";
 import { useState } from "react";
 import { useAuth } from "../../context/auth-context";
 
-export function LogIn() {
+export function Login() {
   const navigate = useNavigate();
 
   const { signIn } = useAuth();
@@ -34,15 +34,13 @@ export function LogIn() {
         <TextField
           value={username}
           onChange={(event) => setUsername(event.target.value)}
-          id="outline-basic"
-          label="E-mail"
-          type="email"
+          label="Login"
+          type="text"
           variant="outlined"
         />
         <TextField
           value={password}
           onChange={(event) => setPassword(event.target.value)}
-          id="outline-basic"
           label="Senha"
           type="password"
           variant="outlined"
