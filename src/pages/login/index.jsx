@@ -1,12 +1,12 @@
 import { Button, TextField } from "@mui/material";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import styles from "./style.module.css";
 import { useState } from "react";
 import { useAuth } from "../../context/auth-context";
 
 export function LogIn() {
-//   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { signIn } = useAuth();
   const [username, setUsername] = useState("");
@@ -20,7 +20,7 @@ export function LogIn() {
     const ok = await signIn(data);
 
     if (ok) {
-    //   navigate("/home");
+      navigate("/home");
     } else {
       alert("Email ou senha inválida");
     }
